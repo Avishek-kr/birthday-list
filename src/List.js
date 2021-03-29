@@ -13,7 +13,6 @@ const List = ({people}) => {
         <div>
           <h4>{name}</h4>
           <p>{age} years</p>
-          <button style={{padding:'0px', marginTop:'5px'}} onClick={removeItem(id)}>Remove</button>
         </div>
       </article>
     )
