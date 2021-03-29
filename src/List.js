@@ -1,11 +1,23 @@
 import React from 'react';
 import './App'
 
-const List = () => {
+const List = ({people}) => {
   
   return ( 
   <>
-   
+      {people.map((person)=>{
+    const {name, age, image, id} = person;
+    return (
+      <article key={id} className='person'>
+        <img src={image} alt=""/>
+        <div>
+          <h4>{name}</h4>
+          <p>{age} years</p>
+          <button style={{padding:'0px', marginTop:'5px'}} onClick={removeItem(id)}>Remove</button>
+        </div>
+      </article>
+    )
+    })}
     </>
   );
 };
